@@ -12,23 +12,20 @@ const app = Vue.createApp({
     data() {
         return {
             listaMail: [],
-
-
-
         }
     },
 
     methods: {
         generaMails() {
-            //for (let i = 0; i < 10; i++) {
-            axios
-                .get("https://flynn.boolean.careers/exercises/api/random/mail")
-                .then((response) => {
-                    listaMail.push(response.data.response);
+            for (let i = 0; i < 10; i++) {
+                axios
+                    .get("https://flynn.boolean.careers/exercises/api/random/mail")
+                    .then((response) => {
+                        this.listaMail.push(response.data.response);
 
-                });
+                    });
 
-            //}
+            }
         },
 
     },
