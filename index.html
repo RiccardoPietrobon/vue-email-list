@@ -46,8 +46,8 @@
         <div class="container p-3">
             <h1>Genera mails</h1>
             <button type="button" class="btn btn-primary" @click="generaMails()">Genera</button>
-            <ul v-for="mail in listaMail">
-                <li>{{mail}}</li>
+            <ul v-if="listaMail.length === 10">
+                <li v-for="mail in listaMail">{{mail}}</li>
             </ul>
         </div>
 
